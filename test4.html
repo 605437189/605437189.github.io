@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		div{
+			width:100px;
+			height:100px;
+			background:red;
+			border:1px solid yellow;
+			padding:10px;
+			opacity:.5;
+			filter:alpha(opacity:50);
+
+		}
+		
+	</style>
+	<script type='text/javascript' scr='JS/move.js'></script>
+</head>
+<body>
+	<div class="box" id='box'></div>
+	<div id="box2">assasas</div>
+</body>
+
+<script>
+window.onload=function(){
+	var obox =document.getElementById('box');
+	var obox2 =document.getElementById('box2');
+	
+	obox.onmouseenter=function(){
+		move(this,'opacity',100)
+	}
+	obox.onmouseleave=function(){
+		move(this,'opacity',50)
+	}
+	obox2.onmouseenter=function(){
+		move(this,'fontSize',30)
+	}
+	obox2.onmouseleave=function(){
+		move(this,'fontSize',16)
+	}
+	
+}	
+</script>
+</html>
