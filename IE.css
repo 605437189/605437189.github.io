@@ -1,0 +1,26 @@
+@media \0screen\,screen\9{
+	.banner_btn{
+		height:60px;
+	}
+	.banner_btn .tab{
+		width:100%;
+		height:60px;
+		position:static;
+		background:#fff;
+		filter:Alpha(opacity=20);
+	}
+	.banner_btn .tab li{
+		position:relative;
+		margin-top:18px;
+	}
+	.banner_btn .tab li:first-child{
+		margin-left:555px;
+	}
+	.banner_btn .tab li{
+		background:transparent url(images/dot.png) no-repeat 0 0;
+	}
+	.banner_btn .tab li.active{
+		background:transparent url(images/dot2.png) no-repeat 0 0;
+	}
+	
+}

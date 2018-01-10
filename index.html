@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<link rel="stylesheet" type="text/css" href="IE.css"/>
+	</head>
+	<body>
+		<!--顶部-->
+		<div class="top">
+			<ul class="top_nav">
+				<li><a href="#">新闻</a></li>
+				<li><a href="#">网页</a></li>
+				<li><a href="#">微信</a></li>
+				<li><a href="#">知乎</a></li>
+				<li><a href="#">图片</a></li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">明医</a></li>
+				<li class='with_new'><a href="#">英文</a> <img class="icon_new" style='width:13px;height:16px' src='images/nav-new.gif'></img></li>
+				<li class='cur'><a href="#">音乐</a></li>
+				<li><a href="#">更多>></a></li>
+			</ul>
+		</div>
+		<!--顶部-->
+	<!--搜索部分-->
+		<div class="search_part">
+			<div class="logo fl ">
+				<a href="#"><img src="images/sougou_logo.png"/></a>
+			</div>
+			<div class="search fl ">
+				<form action="" method='GET' name='searchForm' >
+					<input class='fl' type="text" name="search_content" id="search_content" />
+				<input class='fl' type="submit" id='btn_search' value="搜狗搜索" />
+				</form>
+				
+			</div>
+		</div>
+		<!--搜索部分-->
+		<!--轮播部分-->
+		<div class="slide_box">
+		<div class="slide_top">
+			<ul class="music_nav fl">
+				<li class='cur'><a href="#">首页</a></li>
+				<li><a href="#">榜单</a></li>
+				<li><a href="#">歌手</a></li>
+				<li><a href="#">标签</a></li>
+				<li><a href="#">歌单</a></li>
+				<li><a href="#">专辑</a></li>
+				<li><a href="#">MV</a></li>
+			</ul>
+			<div class="slide_hot fr">
+				
+				<a href="#" class='fire'>抗洪赞歌不忘初心</a>
+				<span class='border-bar fl'>|</span>
+				<a href="#">好声音现场视频</a>
+			</div>
+		</div>
+		<div class="banner" id='banner'>
+			<div class="banner_pic">
+				<ul class='banner_list' id='banner_list'>
+					<li class='cur'><a href="#"><img src="images/9.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/43.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/56.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/57.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/61.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/46.png" alt="" /></a></li>
+				</ul>
+			</div>
+			<!--按钮-->
+			<div class="banner_btn" >
+				<ul class='tab' id='banner_btn'>
+				<li class='active'></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				</ul>
+			</div>
+			<!--按钮-->
+			<!--<script>
+				window.onload=function(){
+					var banner=document.getElementById('banner');
+					var tab=document.getElementById('banner_btn').getElementsByTagName('li');
+					var pic=document.getElementById('banner_list').getElementsByTagName('li');
+				 	var index=0;
+				 	var date1=0 ;
+				 	var colorArr=['#2C2C2E','#000000','#091223','#FFFFFD','#8B8A9A','#B4E1F4']
+				 	for(var i=0;i<pic.length;i++){
+				 		tab[i].index=i;
+				 		pic[i].style.background=colorArr[i];
+				 		tab[i].onclick=function(){
+				 			if(new Date()-date1>=500){
+				 				if(this.index==index)return;
+				 				index=this.index;
+				 				changePage(index);
+				 			}
+				 			date1=new Date();
+				 		}
+				 	}
+				 	var timer=setInterval(function(){
+				 		index++;
+				 		if(index==pic.length)index=0;
+				 		changePage(index);
+				 	},4000);
+				 	banner.onmousemove=function(){
+				 		clearInterval(timer);
+				 		
+				 	}
+				 	banner.onmouseleave=function(){
+				 		setTimeout(function(){
+				 			clearInterval(timer);
+				 			timer=setInterval(function(){
+					 			index++;
+					 			if(index==pic.length)index=0;
+					 			changePage(index);
+				 			},4000);
+				 		},2000)
+				 	}
+				 	function changePage(index){
+				 		for(var i=0;i<pic.length;i++){
+				 			pic[i].className='';
+				 			pic[i].style.opacity=0;
+				 			pic[index].style.filter='alpha(opacity=0)';
+				 			tab[i].className='';
+				 		}
+				 		tab[index].className='active'
+				 		pic[index].className='cur';
+				 		setOpacity1();
+				 	}
+					 function setOpacity1(){
+					 		clearInterval(timer);
+						var timer=setInterval(function(){	
+							var opa=Math.round(parseFloat(getStyle(pic[index],'opacity')*100))
+							var speed=Math.ceil((100-opa)/6);
+				 			if(opa==100 ){
+				 				clearInterval(timer);
+				 		    }
+				 			else{
+				 				pic[index].style.opacity=(opa+speed)/100;
+				 				pic[index].style.filter='alpha(opacity='+(opa+speed)+')'
+				 			}
+				 		},50)}
+				}
+				function getStyle(obj,attr){
+					if(obj.currentStyle){
+						return obj.currentStyle[attr]
+					}
+					else{
+						return getComputedStyle(obj,true)[attr];
+					}
+				}
+			</script>-->
+			<!--标签-->
+			<div class="wrap">
+				<div class="labels">
+					<div class="tit">
+						<h2 class='fl'>热门标签</h2>
+						<div class="labels_more">
+							<a href="" class=''>更多&gt;</a>
+						</div>
+						
+					</div>
+					<ul class="label_list">
+						<li><a href="">红歌</a></li>
+						<li><a href="">流行</a></li>
+						<li><a href="">休闲</a></li>
+						<li><a href="">伤感</a></li>
+						<li><a href="">欢快</a></li>
+						<li><a href="">安静</a></li>
+						<li><a href="">甜蜜</a></li>
+						<li><a href="">华语</a></li>
+						<li><a href="">感性</a></li>
+						<li><a href="">英语</a></li>
+						<li><a href="">思念</a></li>
+						<li><a href="">心痛</a></li>
+						<li><a href="">孤单</a></li>
+						<li><a href="">华语女歌手</a></li>
+						<li><a href="">摇滚</a></li>
+						<li><a href="">R&B</a></li>
+						<li><a href="">音乐达人</a></li>
+						<li><a href="">网络</a></li>
+						<li><a href="">华语男歌手</a></li>
+						<li><a href="">轻音乐</a></li>
+						<li><a href="">期待</a></li>
+						<li><a href="">叛逆</a></li>
+						<li><a href="">睡前</a></li>
+						<li><a href="">经典好歌</a></li>
+						<li><a href="">舞曲</a></li>
+						<li><a href="">致青春</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--标签-->
+		</div>
+			
+		</div>
+		
+		<!--轮播部分-->
+		<!--新碟推荐-->
+		<div class="new">
+			<div class="title">
+				<h2 class='disk'>新碟推荐</h2>
+				<ul class="sort fl">
+					<li><a href="#">热门</a><span class="bar">|</span></li>
+					<li><a href="#">华语</a><span class="bar">|</span></li>
+					<li class='cur'><a href="#">欧美</a><span class="bar">|</span></li>
+					<li><a href="#">日本</a><span class="bar">|</span></li>
+					<li><a href="#">韩国</a></li>
+				</ul>
+			</div>
+			<div class="hot_list">
+				<ul>
+					<li>
+						<a class='album_cover' href=""><img src="images/dw.jpg" alt="" />
+						<span class='cover'></span>
+						</a>
+						<p class='album_name'><a href="">Dangerous Woman</a></p>
+						<p class='artist'><a href="">Ariana Grande</a></p>
+					</li>
+					<li>
+						<a class='album_cover' href=""><img src="images/anti.jpg" alt="" />
+						<span class='cover'></span>
+						</a>
+						<p class='album_name'><a href="">Anti</a></p>
+						<p class='artist'><a href="">Rihanna</a></p>
+					</li>
+					<li>
+						<a class='album_cover' href="">
+							
+							<img src="images/malibu.jpg" alt="" />
+						<span class='cover'></span></a>
+						<p class='album_name'><a href="">Malibu</a></p>
+						<p class='artist'><a href="">Anderson Paak</a></p>
+					</li>
+					<li>
+						<a class='album_cover' href="">
+							
+							<img src="images/Lemonade.jpg" alt="" />
+							<span class='cover'></span>
+						</a>
+						<p class='album_name'><a href="">Lemonade</a></p>
+						<p class='artist'><a href="">Beyonce</a></p>
+					</li>
+					<li class='spec'>
+						<a class='album_cover' href="">
+							
+							<img src="images/emotion.jpg" alt="" />
+							<span class='cover'></span>
+						</a>
+						<p class='album_name'><a href="">Emotion-B</a></p>
+						<p class='artist'><a href="">Carly Rae Jpsen</a></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--新碟推荐-->
+		
+		<!--排行榜-->
+		<div class="charts">
+			<!--第一个-->
+			<div class="chart_list">
+				<div class="labels">
+					<div class="tit">
+						<h2 class='local bcolor1 fl'>E&bull;MO</h2>
+						<div class="labels_more">
+							<a href="" class=''>更多&gt;</a>
+						</div>
+					</div>
+				</div>
+				<ul class="list_content local_content">
+					<li><h3 class='number color1 fl'>1</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Run Away With Me</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+						
+					</li>
+					<li><h3 class='number color2'>2</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">E&bull;mo&bull;tion</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>	
+						
+							
+						
+					</li>
+					<li><h3 class='number color3'>3</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">I really like you</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>4</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Gimmie Love</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>5</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">All That</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>6</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Your Type</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>7</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Let's Get Lost</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>8</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Black Heart</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>9</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Warm Blood</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>10</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Making the Most of the Night</a></p>
+								<p><a href="#">Carly Rae Jpsen</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+				</ul>
+			</div>	
+			<!--第一个-->
+			
+				
+			<!--第二个-->
+			<div class="chart_list">
+				
+				<div class="labels">
+					<div class="tit">
+						<h2 class='local bcolor2 fl'>Lemonade</h2>
+						<div class="labels_more">
+							<a href="" class=''>更多&gt;</a>
+						</div>
+					</div>
+				</div>
+				<ul class="list_content local_content">
+					<li><h3 class='number color1 fl'>1</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Pray You Catch Me</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+						
+					</li>
+					<li><h3 class='number color2'>2</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Hold Up</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>	
+						
+							
+						
+					</li>
+					<li><h3 class='number color3'>3</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Don't Hur Youself</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>4</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Sorry</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>5</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">6 Inch</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>6</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Daddy Lessons</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>7</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Love Drought</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>8</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Freedom</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>9</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">All Night</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>10</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Formation</a></p>
+								<p><a href="#">Beyonce</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+				</ul>
+			</div>	
+			
+			<!--第二个-->
+		
+			<!--第三个-->
+			<div class="chart_list">
+				
+				<div class="labels">
+					<div class="tit">
+						<h2 class='local bcolor3 fl'>Orange</h2>
+						<div class="labels_more">
+							<a href="" class=''>更多&gt;</a>
+						</div>
+					</div>
+				</div>
+				<ul class="list_content local_content">
+					<li><h3 class='number color1 fl'>1</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Start</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+						
+					</li>
+					<li><h3 class='number color2'>2</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Thinkin Bout You</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>	
+						
+							
+						
+					</li>
+					<li><h3 class='number color3'>3</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Fertilizer</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>4</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Sierra Leone</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>5</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Sweet Life</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>6</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Super Rich Kids</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>7</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Pilot Jones</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>8</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Crack Rokc</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>9</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Pyramids</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+					<li><h3 class='number'>10</h3>
+						<div class="songs fl">
+							<div class="song_info fl">
+								<p><a class='color_hover' href="#">Forrest Gump</a></p>
+								<p><a href="#">Frank Ocean</a></p>
+							</div>
+							<a class='play' href=""></a>
+						</div>
+					</li>
+				</ul>
+			</div>	
+			
+			<!--第三个-->
+			
+			<!--热门歌单-->
+			<div class="hot spec fl">
+				<div class="hot_chart">
+					<div class="labels">
+					<div class="tit">
+						<h2 class='hot_h2 fl'>HOT</h2>
+						<div class="labels_more">
+							<a href="" class=''>更多&gt;</a>
+						</div>
+					</div>
+					<div class="billboards">
+						<img class='UK' src="images/bang_img_01.png" width='290px' alt="" />
+						<img class='US' src="images/bang_img_02.png" width='290px' alt="" />
+					</div>
+				</div>
+				</div>
+				<div class="hot_song">
+					<div class="labels">
+					<div class="tit">
+						<h2 class='hot_h2 fl'>HOT</h2>
+						<div class="labels_more">
+							<a href="" class=''>更多&gt;</a>
+						</div>
+					</div>
+					
+						<ul class='cards'>
+							<li class='top1'>
+								<a href=""><img  src="images/dance.jpg" width='290px' alt="" /></a>
+								<p>节奏</p>
+							</li>
+							<li class='top2'>
+							</li>
+							</li>
+							<li class='top3'></li>
+						</ul>
+						
+					
+				</div>
+				</div>
+			</div>
+			<!--热门歌单-->
+		</div>
+		
+		<!--排行榜-->
+		
+		<!--歌手-->
+		<div class="singer">
+			<div class="title">
+				<h2 class='disk'>歌手</h2>
+				<ul class="sort fl">
+					<li><a href="#">热门</a><span class="bar">|</span></li>
+					<li><a href="#">华语</a><span class="bar">|</span></li>
+					<li class='cur'><a href="#">欧美</a><span class="bar">|</span></li>
+					<li><a href="#">日本</a><span class="bar">|</span></li>
+					<li><a href="#">韩国</a></li>
+				</ul>
+				<a class='more fr' href="#">更多&gt;&gt;</a>
+			</div>
+			<div class="singer_wall">
+				
+					<a class='big' href="">
+						<img src="images/SEPT.jpg" width='400px' height='410px' alt="" />
+					</a>
+					<ul class="others">
+						<li><a href=""><img src="images/1975.jpg" alt="" /></a><span class="name">The 1975</span></li>
+						<li><a href=""><img src="images/bruno.jpg" alt="" /></a><span class="name">Bruno Mars</span></li>
+						<li><a href=""><img src="images/joanne.jpg" alt="" /></a><span class="name">Lady Gaga</span></li>
+						<li><a href=""><img src="images/kendrick.jpg" alt="" /></a><span class="name">Kendrick Lamar</span></li>
+						<li><a href=""><img src="images/wekend.jpg" alt="" /></a><span class="name">The Weekend</span></li>
+						<li><a href=""><img src="images/300_singerpic_116322_0.jpg" alt="" /></a><span class="name"></span></li>
+						<li><a href=""><img src="images/ocean.jpg" alt="" /></a><span class="name">Frank Ocean</span></li>
+						<li><a href=""><img src="images/drake.jpg" alt="" /></a><span class="name">Drake</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--歌手-->
+		
+		<!--歌曲标签-->
+			<div class="music_labels">
+				<div class="title">
+				<h2 class='disk'>标签</h2>
+				<a class='more fr' href="#">更多&gt;&gt;</a>
+				</div>
+				
+				<ul class="music_list ">
+					<li>
+						<a href="#" class="sort_img">
+							<img src="images/sort_01.png" alt="" />
+						</a>
+						<div class="sort_list">
+							<a class='spec' href="#">华语</a>
+							<a href="#">英语</a>
+							<a href="#">网络</a>
+							<a href="#">情歌</a>
+							<a href="#">韩语</a>
+							<a class='spec' href="#">节日</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="sort_img">
+							<img src="images/sort_02.png" alt="" />
+						</a>
+						<div class="sort_list">
+							<a class='spec' href="#">伤感</a>
+							<a href="#">欢快</a>
+							<a href="#">安静</a>
+							<a href="#">甜蜜</a>
+							<a href="#">感性</a>
+							<a href="#">思念</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="sort_img">
+							<img src="images/sort_03.png" alt="" />
+						</a>
+						<div class="sort_list">
+							<a href="#">流行</a>
+							<a href="#">摇滚</a>
+							<a href="#">R&B</a>
+							<a class='spec' href="#">舞曲</a>
+							<a href="#">电子</a>
+							<a class='spec' href="#">嘻哈</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="sort_img">
+							<img src="images/sort_04.png" alt="" />
+						</a>
+						<div class="sort_list">
+							<a href="#">休闲</a>
+							<a href="#">睡前</a>
+							<a href="#">旅行</a>
+							<a href="#">聚会</a>
+							<a href="#">开车</a>
+							<a class='spec' href="#">约会</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="sort_img">
+							<img src="images/sort_05.png" alt="" />
+						</a>
+						<div class="sort_list">
+							<a class='spec'  href="#">90后</a>
+							<a   href="#">80后</a>
+							<a class='spec'  href="#">动漫</a>
+							<a  href="#">神曲</a>
+							<a  href="#">70后</a>
+							<a  href="#">游戏</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		
+		<!--歌曲标签-->
+		
+		<!--歌单-->
+			<div class="playlist">
+				<div class="title">
+				<h2 class='disk'>歌单</h2>
+				<ul class="sort fl">
+					<li><a href="#">热门</a><span class="bar">|</span></li>
+					<li><a href="#">C-POP</a><span class="bar">|</span></li>
+					<li class='cur'><a href="#">欧美</a><span class="bar">|</span></li>
+					<li><a href="#">K-POP</a></li>
+				</ul>
+				<a class='more fr' href="#">更多&gt;&gt;</a>
+				</div>
+				
+				<div class="item">
+					<a href='#' class="item_img">
+						<img src="images/lorde.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>成长，就是看见阳光后的黑暗</p>
+						<ul class='intro_list'>
+							<li><a href="#">Perfect Place </a>-<a href="#">Lorde</a></li>
+							<li><a href="#">Don't You Worry</a>-<a href='#'>Swedish House Mafia</a></li>
+							<li><a href="#">Like a Prayer</a>-<a href="#">Mdonna</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a href='#' class="item_img">
+						<img src="images/jens.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>生活无常，细水长流</p>
+						<ul class='intro_list'>
+							<li><a href="#">Life Will See You Now</a>-<a href="#">Jens Lekman</a></li>
+							<li><a href="#">Rocket</a>-<a href='#'>Beyonce</a></li>
+							<li><a href="#">How Does It Feel?</a>-<a href="#">Ang'lo</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a href='#' class="item_img">
+						<img src="images/diomand.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>制造人格的音乐时代</p>
+						<ul class='intro_list'>
+							<li><a href="#">Love On The Brain</a>-<a href="#">Rihanna</a></li>
+							<li><a href="#">Slide</a>-<a href='#'>Frank Ocean</a></li>
+							<li><a href="#">Look At What You Make Me Do</a>-<a href="#">Taylor Swift</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="item">
+					<a  href='#' class="item_img">
+						<img src="images/artist.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>无聊闭嘴来听歌</p>
+						<ul class='intro_list'>
+							<li><a href="#">艺术家脾气</a>-<a href="#">Leo王</a></li>
+							<li><a href="#">男孩</a>-<a href='#'>梁博</a></li>
+							<li><a href="#">Low Lights</a>-<a href="#">Kanye West</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a href='#'  class="item_img">
+						<img src="images/melodrama.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>学习必备音乐</p>
+						<ul class='intro_list'>
+							<li><a href="#">Green Lights</a>-<a href="#">Lorde</a></li>
+							<li><a href="#">Adorn</a>-<a href='#'>Miguel</a></li>
+							<li><a href="#">Power Trip</a>-<a href="#">J.cole(feat.Miguel)</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a href='#' class="item_img">
+						<img src="images/formation.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>这也许是我眼中厉害的歌</p>
+						<ul class='intro_list'>
+							<li><a href="#">Formation</a>-<a href="#">Beyonce</a></li>
+							<li><a href="#">Work</a>-<a href='#'>Rihanna</a></li>
+							<li><a href="#">Butterfly</a>-<a href="#">Mariah Carey</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a  href='#' class="item_img">
+						<img src="images/you.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>这首歌，有点意思</p>
+						<ul class='intro_list'>
+							<li><a href="#">It's My House</a>-<a href="#">Mika</a></li>
+							<li><a href="#">Loving’ it</a>-<a href='#'>Ariana Grande</a></li>
+							<li><a href="#">诱</a>-<a href="#">林宥嘉</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a href='#' class="item_img">
+						<img src="images/run.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>为什么要来一次说走就走的旅行</p>
+						<ul class='intro_list'>
+							<li><a href="#">Run Away With Me</a>-<a href="#">Carly Rae Jpsen</a></li>
+							<li><a href="#">Let's Get it Started</a>-<a href='#'>Black Eye Peas</a></li>
+							<li><a href="#">What dou you think about the car?</a>-<a href="#">Dclan</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a href='#' class="item_img">
+						<img src="images/purple.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>书时光，王子</p>
+						<ul class='intro_list'>
+							<li><a href="#">Kiss</a>-<a href="#">Prince</a></li>
+							<li><a href="#">2 on</a>-<a href='#'>Tinashe</a></li>
+							<li><a href="#">XO</a>-<a href="#">Beyonce</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a href='#' class="item_img">
+						
+						<img src="images/jay.jpg" width='228px' alt="" />
+					</a>
+					<div class="intro">
+						<p>正真8090</p>
+						<ul class='intro_list'>
+							<li><a href="#">双节棍</a>-<a href="#">周杰伦</a></li>
+							<li><a href="#">龙的传人</a>-<a href='#'>王力宏</a></li>
+							<li><a href="#">Super Star</a>-<a href="#">S.H.E</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<!--歌单-->
+		
+		<!--底部-->
+		 <div class="footer">
+		 	<p>
+		 		<a href="">企业推广</a>-
+		 		<a href="">输入法</a>-
+		 		<a href="">浏览器</a>-
+		 		<a href="">诚聘英才</a>-
+		 		<a href="">免责声明</a>-
+		 		<a href="">官网微博</a>-
+		 		<a href="">帮助</a><br />
+		 		<br />
+		 		&copy;2017 SOUGOU.COM京ICP证050897号 文网文[2013]1154-1158号
+		 	</p>
+		 </div>
+		<!--底部-->
+		
+	</body>
+</html>
